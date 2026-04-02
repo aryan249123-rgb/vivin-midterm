@@ -1,31 +1,64 @@
-pipeline {
-    agent any
-
-    stages {
-
-        stage('Checkout Code') {
-            steps {
-                git branch: 'main', url: 'https://github.com/aryan249123-rgb/vivin-midterm.git'
-            }
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Resume1</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+            background-color: #f4f4f4;
         }
-
-        stage('Verify Files') {
-            steps {
-                bat 'dir'
-            }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
         }
-
-        stage('Deploy to Local Folder') {
-            steps {
-                bat 'mkdir C:\\deploy-folder || exit 0'
-                bat 'xcopy /E /I /Y * C:\\deploy-folder'
-            }
+        h1, h2 {
+            color: #333;
         }
-
-        stage('Open in Browser') {
-            steps {
-                bat 'start chrome C:\\deploy-folder\\index.html'
-            }
+        hr {
+            border: 1px solid #ddd;
         }
-    }
-}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Vivin</h1>
+    <p>Email: viviin@email.com | Phone: 1234567890</p>
+
+    <hr>
+
+    <h2>Objective</h2>
+    <p>To obtain a challenging position where I can use my skills and grow professionally.</p>
+
+    <h2>Education</h2>
+    <p><b>Bachelor of Technology</b> - Your College Name (Year)</p>
+
+    <h2>Skills</h2>
+    <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Java / Python</li>
+        <li>React / Node.js</li>
+    </ul>
+
+    <h2>Projects</h2>
+    <p><b>Project Name:</b> Short description of your project.</p>
+
+    <h2>Experience</h2>
+    <p><b>Internship/Job Title</b> - Company Name</p>
+    <p>Worked on developing web applications.</p>
+
+    <h2>Achievements</h2>
+    <ul>
+        <li>Achievement 1</li>
+        <li>Achievement 2</li>
+    </ul>
+
+    <h2>Hobbies</h2>
+    <p>Reading, Coding, Gaming</p>
+
+</div>
+
+</body>
+</html>
